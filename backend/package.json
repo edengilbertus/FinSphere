@@ -1,0 +1,41 @@
+{
+  "name": "finsphere-backend",
+  "version": "1.0.0",
+  "description": "FinSphere Backend API - Financial management platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "./deploy.sh",
+    "docker:build": "docker build -t finsphere-backend .",
+    "docker:run": "docker run -p 8080:8080 --env-file .env finsphere-backend"
+  },
+  "keywords": [
+    "fintech",
+    "finance",
+    "api",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google-cloud/storage": "^7.16.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "multer": "^2.0.0",
+    "socket.io": "^4.8.1",
+    "sharp": "^0.33.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "axios": "^1.9.0",
+    "nodemon": "^3.1.10"
+  }
+}
